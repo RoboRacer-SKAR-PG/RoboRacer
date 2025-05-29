@@ -26,15 +26,15 @@ sudo run_simulation.sh
   - [run_nodes.sh](./robot_controller_ws/run_nodes.sh) is a script used to start nodes at container startup
 
 - `simulation/` directory
-  - directory for all simulation related code, especialy [f1tenth_gym_ros](https://github.com/RoboRacer-SKAR-PG/f1tenth_gym_ros.git)
+  - directory for all simulation related code, especially [f1tenth_gym_ros](https://github.com/RoboRacer-SKAR-PG/f1tenth_gym_ros.git)
 
-`run_simulation.sh` script will cauze to copy [/robot_controller_ws/src/](./robot_controller_ws/src/) direcotry each time it is called, and all ros nodes will build at container startup, as specified in [build.sh](./robot_controller_ws/build.sh)
+`run_simulation.sh` script will cause to copy [/robot_controller_ws/src/](./robot_controller_ws/src/) directory each time it is called, and all ros nodes will build at container startup, as specified in [build.sh](./robot_controller_ws/build.sh)
 
 **Note**
-To apply changes made in run_nodes.sh or build.sh, you must run:
+To apply changes made in [run_nodes.sh](./robot_controller_ws/run_nodes.sh) or [build.sh](./robot_controller_ws/build.sh), you must run:
 
 ```bash
-sudo docker-compose up --rmi all
+sudo docker-compose down --rmi all
 ```
 
 Which will rebuild containers with new scripts.
