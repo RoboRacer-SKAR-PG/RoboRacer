@@ -5,6 +5,12 @@ ENV DEBIAN_FRONTEND=noninteractive \
     RMW_IMPLEMENTATION=rmw_cyclonedds_cpp \
     WORKSPACE_DIR=/robot_controller_ws
 
+SHELL ["/bin/bash", "-c"]
+
+# Use local ubuntu mirror
+RUN sed -i 's|http://archive.ubuntu.com/ubuntu|http://ubuntu.task.gda.pl/ubuntu|g' /etc/apt/sources.list && \
+    sed -i 's|http://security.ubuntu.com/ubuntu|http://ubuntu.task.gda.pl/ubuntu|g' /etc/apt/sources.list
+
 # Install required packages
 RUN apt-get update && apt-get install -y \
     ros-foxy-desktop \

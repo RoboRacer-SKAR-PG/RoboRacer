@@ -36,7 +36,8 @@ services:
     image: robot_controller_ros
     build: ./robot_controller_ws/
     volumes:
-      - ./robot_controller_ws/src:/robot_controller_ws/src
+    # Get most recent source code for all nodes
+      - ./robot_controller_ws/src:/robot_controller_ws/src 
     network_mode: "host"
     stdin_open: true
     tty: true
