@@ -13,7 +13,9 @@ Tested on:
 - run
 
 ```bash
-chmod +x run_simulation.sh
+chmod +x ./run_simulation.sh
+git submodule init
+git submodule update
 ```
 
 - start simulation with
