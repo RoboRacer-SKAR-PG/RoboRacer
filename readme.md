@@ -5,6 +5,7 @@
 Tested on:
 
 - Ubuntu 20.04.6 LTS 64-bit
+- Ubuntu 22.04.5 LTS 64-bit
 
 ## Quick start
 
