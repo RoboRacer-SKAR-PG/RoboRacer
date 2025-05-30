@@ -22,7 +22,7 @@ git submodule update
 - start simulation with
 
 ```bash
-sudo run_simulation.sh
+sudo ./run_simulation.sh
 ```
 
 ## Overview
